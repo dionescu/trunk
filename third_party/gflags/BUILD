@@ -23,6 +23,8 @@ cc_library(
   name = "gflags",
   copts = [
     "-Ithird_party/gflags/gflags_build/k8/include/gflags",
+    "-Wno-sign-compare",
+    "-Wno-unused-local-typedefs",
   ],
   linkopts = [
     "-pthread",
@@ -42,4 +44,8 @@ cc_test(
   deps = [
     ":gflags"
   ],
+  data = [
+    "upstream/test/gflags_unittest_flagfile",
+  ],
+  args = ["--srcdir=third_party/gflags"],
 )
