@@ -29,10 +29,10 @@
 #define HAVE_LIBPTHREAD 1
 
 /* Define to 1 if you have the <libunwind.h> header file. */
-#define HAVE_LIBUNWIND_H 1
+/* #undef HAVE_LIBUNWIND_H */
 
 /* define if you have google gflags library */
-#define HAVE_LIB_GFLAGS 1
+/* #undef HAVE_LIB_GFLAGS */
 
 /* define if you have google gmock library */
 /* #undef HAVE_LIB_GMOCK */
@@ -41,7 +41,7 @@
 /* #undef HAVE_LIB_GTEST */
 
 /* define if you have libunwind */
-#define HAVE_LIB_UNWIND 1
+/* #undef HAVE_LIB_UNWIND */
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
@@ -169,7 +169,7 @@
 #define STL_NAMESPACE std
 
 /* location of source code */
-#define TEST_SRC_DIR "../../upstream"
+#define TEST_SRC_DIR "."
 
 /* Version number of package */
 #define VERSION "0.3.4"
@@ -179,3 +179,12 @@
 
 /* Puts following code inside the Google namespace */
 #define _START_GOOGLE_NAMESPACE_ namespace google {
+
+// Annoying stuff for windows -- makes sure clients can import these functions
+#ifndef GOOGLE_GLOG_DLL_DECL
+# if defined(_WIN32) && !defined(__CYGWIN__)
+#   define GOOGLE_GLOG_DLL_DECL  __declspec(dllimport)
+# else
+#   define GOOGLE_GLOG_DLL_DECL
+# endif
+#endif
