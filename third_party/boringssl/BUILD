@@ -451,12 +451,14 @@ tool_sources = [
     "src/tool/const.cc",
     "src/tool/digest.cc",
     "src/tool/genrsa.cc",
+    "src/tool/internal.h",
     "src/tool/pkcs12.cc",
     "src/tool/rand.cc",
     "src/tool/server.cc",
     "src/tool/speed.cc",
     "src/tool/tool.cc",
     "src/tool/transport_common.cc",
+    "src/tool/transport_common.h",
 ]
 
 crypto_sources_aarch64 = [
