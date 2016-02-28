@@ -160,9 +160,6 @@
 [submodule "third_party/java/error-prone"]
 	path = third_party/java/error-prone
 	url = https://github.com/google/error-prone.git
-[submodule "third_party/java/netty"]
-	path = third_party/java/netty
-	url = https://github.com/LuminateWireless/netty.git
 [submodule "third_party/java/commons-logging/upstream"]
 	path = third_party/java/commons-logging/upstream
 	url = git://github.com/apache/commons-logging.git
