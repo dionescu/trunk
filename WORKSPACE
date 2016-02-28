@@ -32,10 +32,16 @@ bind(
   actual = "@protobuf//:protobuf",
 )
 
-# GRPC codegen plugin
+# GRPC c++ codegen plugin
 bind(
   name = "grpc_cpp_plugin",
   actual = "@grpc//:grpc_cpp_plugin"
+)
+
+# GRPC Java codegen plugin
+bind(
+  name = "grpc_java_plugin",
+  actual = "@grpc-java//:grpc_java_plugin"
 )
 
 # GRPC C++ runtime library

@@ -136,7 +136,7 @@ def proto_library(name, src, deps=[],
   else:
     grpc_cpp_plugin = None
   if generate_java and has_service:
-    grpc_java_plugin = "//third_party/java/grpc-java:grpc_java_plugin"
+    grpc_java_plugin = "//external:grpc_java_plugin"
   else:
     grpc_java_plugin = None
   proto_pkg = genproto(
@@ -168,7 +168,7 @@ def proto_library(name, src, deps=[],
     java_deps = ["//external:protobuf_java_lib"]
     if has_service:
       java_deps += [
-        "//third_party/java/grpc-java",
+        "//external:grpc_java",
       ]
     for dep in deps:
       java_deps += [dep + "_java"]
