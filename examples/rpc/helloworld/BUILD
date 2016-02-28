@@ -56,7 +56,7 @@ java_binary(
   main_class = "io.grpc.examples.helloworld.HelloWorldClient",
   deps = [
     ":helloworld_java",
-    "//third_party/java/grpc-java",
+    "//external:grpc_java",
   ]
 )
 
@@ -68,6 +68,6 @@ java_binary(
   main_class = "io.grpc.examples.helloworld.HelloWorldServer",
   deps = [
     ":helloworld_java",
-    "//third_party/java/grpc-java",
+    "//external:grpc_java",
   ]
 )
