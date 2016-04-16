@@ -3,10 +3,11 @@
 // This file demonstrates the usage of tcmalloc heapchecker to detect
 // memory leak.
 //
-// bazel build examples/asan:leak
-//
+// bazel run --config=lsan :leak
+// 
+// Make sure your .bashrc contains:
 // export PPROF_PATH=...path_to...third_party/gperftools/upstream/src/pprof
-// HEAPCHECK=strict bazel-bin/examples/asan/leak
+// export HEAPCHECK=normal
 //
 // You should see leak report like this:
 //

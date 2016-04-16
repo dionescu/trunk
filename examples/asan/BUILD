@@ -10,7 +10,4 @@ cc_binary(
   srcs = [
     "leak.cc"
   ],
-  deps = [
-    "//third_party/gperftools:tcmalloc_heapcheck",
-  ],
 )

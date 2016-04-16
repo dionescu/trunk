@@ -10,6 +10,8 @@ build:asan --copt -g
 build:asan --copt -fno-omit-frame-pointer
 build:asan --linkopt -fsanitize=address
 
+build:lsan --custom_malloc=//third_party/gperftools:tcmalloc_heapcheck
+
 # Thread sanitizer
 # bazel build --config tsan
 build:tsan --crosstool_top //tools/lrte:toolchain
