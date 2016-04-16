@@ -57,7 +57,6 @@ cc_library(
   hdrs = [
     "upstream/src/base/basictypes.h",
     "upstream/src/base/sysinfo.h",
-    "upstream/src/base/cycleclock.h",
   ],
   srcs = [
     "upstream/src/base/logging.h",
@@ -83,7 +82,6 @@ cc_library(
     "upstream/src/base/spinlock_win32-inl.h",
     "upstream/src/base/spinlock_linux-inl.h",
     "upstream/src/base/spinlock_posix-inl.h",
-    "upstream/src/base/synchronization_profiling.h",
     "upstream/src/base/atomicops-internals-macosx.h",
     "upstream/src/base/atomicops-internals-linuxppc.h",
     "upstream/src/base/atomicops-internals-arm-generic.h",
@@ -119,6 +117,7 @@ cc_library(
   ],
   deps = [
     ":config_header",
+    ":logging",
   ],
 
 )
@@ -160,6 +159,8 @@ cc_library(
     "upstream/src/stacktrace.cc",
     "upstream/src/base/elf_mem_image.cc",
     "upstream/src/base/vdso_support.cc",
+    "upstream/src/maybe_emergency_malloc.h",
+    "upstream/src/fake_stacktrace_scope.cc",
   ],
   deps = [
     ":spinlock",

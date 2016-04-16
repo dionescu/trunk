@@ -66,6 +66,16 @@
 # endif
 #endif
 
+#ifdef __cplusplus
+#define PERFTOOLS_THROW throw()
+#else
+# ifdef __GNUC__
+#  define PERFTOOLS_THROW __attribute__((__nothrow__))
+# else
+#  define PERFTOOLS_THROW
+# endif
+#endif
+
 // Annoying stuff for windows -- makes sure clients can import these functions
 #ifndef PERFTOOLS_DLL_DECL
 # ifdef _WIN32
