@@ -217,3 +217,6 @@
 [submodule "third_party/gperftools/upstream"]
 	path = third_party/gperftools/upstream
 	url = https://github.com/gperftools/gperftools.git
+[submodule "third_party/benchmark"]
+	path = third_party/benchmark
+	url = https://github.com/google/benchmark.git
