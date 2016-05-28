@@ -34,7 +34,6 @@ cc_library(
 cc_test(
   srcs = [
     "upstream/test/gflags_unittest.cc",
-    "upstream/test/config_for_unittests.h",
   ],
   copts = [
     "-Ithird_party/gflags/gflags_build/k8/include/gflags",  # We need "config.h"
