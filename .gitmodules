@@ -7,9 +7,6 @@
 [submodule "third_party/gflags/upstream"]
 	path = third_party/gflags/upstream
 	url = https://github.com/gflags/gflags.git
-[submodule "third_party/bazel/upstream"]
-	path = third_party/bazel/upstream
-	url = https://github.com/google/bazel
 [submodule "third_party/boringssl/src"]
 	path = third_party/boringssl/src
 	url = https://boringssl.googlesource.com/boringssl
