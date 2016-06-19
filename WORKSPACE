@@ -41,7 +41,13 @@ bind(
 # GRPC Java codegen plugin
 bind(
   name = "grpc_java_plugin",
-  actual = "@grpc_java//:grpc_java_plugin"
+  actual = "@grpc_java_repo//:grpc_java_plugin"
+)
+
+# GRPC Java codegen plugin
+bind(
+  name = "grpc_java_core",
+  actual = "@grpc_java_repo//:core"
 )
 
 # GRPC C++ runtime library
@@ -53,16 +59,16 @@ bind(
 # GRPC Java runtime library
 bind(
   name = "grpc_java",
-  actual = "@grpc_java//:grpc-java"
+  actual = "@grpc_java_repo//:grpc_java"
 )
 
-# Guava dependency for grpc-java.
+# Guava dependency for grpc_java.
 bind(
   name = "guava",
   actual = "//third_party/java/guava"
 )
 
-# Netty dependency for grpc-java.
+# Netty dependency for grpc_java.
 bind(
   name = "netty",
   actual = "//third_party/java/netty"
@@ -169,7 +175,7 @@ bind(
   actual = "//third_party/java/slf4j"
 )
 
-# grpc-java dependencies
+# grpc_java dependencies
 bind(
   name = "jsr305",
   actual = "//third_party/java/jsr305"
@@ -304,7 +310,7 @@ new_git_repository(
     build_file = "build/BUILD.grpc",
 )
 new_git_repository(
-    name = "grpc_java",
+    name = "grpc_java_repo",
     remote = "https://github.com/grpc/grpc-java.git",
     commit = "643bb2c6b53d5a4516f13af856d98a85b334f0dc",
     build_file = "build/BUILD.grpcjava",

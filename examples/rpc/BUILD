@@ -1,4 +1,4 @@
-load("/third_party/grpc/grpc_proto", "proto_library")
+load("/tools/build_rules/proto/grpc_proto", "proto_library")
 
 proto_library(
   name = "bank",

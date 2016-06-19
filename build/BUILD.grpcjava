@@ -100,7 +100,7 @@ java_library(
 )
 
 java_library(
-  name = 'grpc-java',
+  name = 'grpc_java',
   exports = [
     ':auth',
     ':core',
@@ -120,7 +120,7 @@ java_library(
     'testing/src/main/**/*.java',
   ]),
   deps = [
-    ':grpc-java',
+    ':grpc_java',
   ],
   testonly = 1,
 )
@@ -133,7 +133,7 @@ java_library(
   ]),
   testonly = 1,
   deps = [
-    ':grpc-java',
+    ':grpc_java',
     ':testing',
     ':netty',
     '//external:google_auth_library_oauth2_http',
@@ -152,7 +152,7 @@ java_test(
     '//external:junit',
     '//external:mockito',
     '//external:okhttp',
-    ':grpc-java',
+    ':grpc_java',
     ':interop',
     ':netty',
     ':testing',
